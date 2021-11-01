@@ -16,6 +16,7 @@ Window.size =(320, 600)
 tareas_registradas = []
 #mensajelist = []
 class main(MDApp):
+    #aqui nesecito ayuda 
     def on_start(self):
         self.elementoList.clear_widgets()
         p=0
@@ -35,13 +36,14 @@ class main(MDApp):
                 mensajelist
             )
             p+=1
-
+    def eliminarTarea(self, *args):
+        print(str(args))
+     #hasta aqui es mi problema
     def agregarTarea(self, *args):
         tareas_registradas.append(str(self.tarea.text))
         print(tareas_registradas)
         self.on_start()
-    def eliminarTarea(self, *args):
-        print(str(args))
+
     def onPress1(self, *args):
         self.changeScreen(2)
     def onPress2(self, *args):
